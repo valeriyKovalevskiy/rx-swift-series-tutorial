@@ -21,5 +21,7 @@ final class CityCell: UITableViewCell {
         
         self.cityLabel.text = viewModel.city
         self.locationLabel.text = viewModel.location
+        
+        self.selectionStyle = .none
     }
 }

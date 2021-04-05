@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C13F0D0261B344000CC4B4E /* AirportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F0CE261B344000CC4B4E /* AirportCell.swift */; };
+		3C13F0D1261B344000CC4B4E /* AirportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C13F0CF261B344000CC4B4E /* AirportCell.xib */; };
+		3C13F0D4261B381500CC4B4E /* AirportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F0D3261B381500CC4B4E /* AirportViewModel.swift */; };
 		3C22C7D82616DBBD00528C2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22C7D72616DBBD00528C2F /* AppDelegate.swift */; };
 		3C22C7DA2616DBBD00528C2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22C7D92616DBBD00528C2F /* SceneDelegate.swift */; };
 		3C22C7DC2616DBBD00528C2F /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22C7DB2616DBBD00528C2F /* SearchCityViewController.swift */; };
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		215FEA2ADC0C226B354B4971 /* Pods-CityAirportSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityAirportSearch.release.xcconfig"; path = "Target Support Files/Pods-CityAirportSearch/Pods-CityAirportSearch.release.xcconfig"; sourceTree = "<group>"; };
+		3C13F0CE261B344000CC4B4E /* AirportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCell.swift; sourceTree = "<group>"; };
+		3C13F0CF261B344000CC4B4E /* AirportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportCell.xib; sourceTree = "<group>"; };
+		3C13F0D3261B381500CC4B4E /* AirportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportViewModel.swift; sourceTree = "<group>"; };
 		3C22C7D42616DBBD00528C2F /* CityAirportSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityAirportSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C22C7D72616DBBD00528C2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C22C7D92616DBBD00528C2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 				3C22C7F62616E2A600528C2F /* SearchCityViewModel.swift */,
 				3C71AB8726173FF000092CB3 /* CityViewModel.swift */,
 				3CE6CE29261B041300067156 /* AirportsViewModel.swift */,
+				3C13F0D3261B381500CC4B4E /* AirportViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -205,6 +212,8 @@
 			children = (
 				3C71AB8B2617487100092CB3 /* CityCell.swift */,
 				3C71AB8C2617487100092CB3 /* CityCell.xib */,
+				3C13F0CE261B344000CC4B4E /* AirportCell.swift */,
+				3C13F0CF261B344000CC4B4E /* AirportCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 				3C22C7E12616DBBE00528C2F /* Assets.xcassets in Resources */,
 				3C71AB8E2617487100092CB3 /* CityCell.xib in Resources */,
 				3C22C7DF2616DBBD00528C2F /* Main.storyboard in Resources */,
+				3C13F0D1261B344000CC4B4E /* AirportCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,9 +369,11 @@
 				3CE6CE2D261B0F3C00067156 /* AirportsCoordinator.swift in Sources */,
 				3C22C8112616E8B100528C2F /* Storyboardable.swift in Sources */,
 				3C22C80C2616E80900528C2F /* BaseCoordinator.swift in Sources */,
+				3C13F0D4261B381500CC4B4E /* AirportViewModel.swift in Sources */,
 				3C22C8152616ED3E00528C2F /* AppCoordinator.swift in Sources */,
 				3C22C7DA2616DBBD00528C2F /* SceneDelegate.swift in Sources */,
 				3C22C7F72616E2A600528C2F /* SearchCityViewModel.swift in Sources */,
+				3C13F0D0261B344000CC4B4E /* AirportCell.swift in Sources */,
 				3C71AB8826173FF000092CB3 /* CityViewModel.swift in Sources */,
 				3C22C81B261701B900528C2F /* UIColor+Extension.swift in Sources */,
 			);
