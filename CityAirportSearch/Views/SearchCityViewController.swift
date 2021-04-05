@@ -16,6 +16,7 @@ final class SearchCityViewController: UIViewController, Storyboardable {
     @IBOutlet private weak var roundedView: UIView!
     @IBOutlet private weak var searchTextField: UITextField!
     
+    // MARK: - Properties
     private let disposeBag = DisposeBag()
     private static let reuseIdentifier = "CityCell"
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<CityItemsSection>(configureCell: { _, tableView, indexPath, item in
@@ -27,9 +28,9 @@ final class SearchCityViewController: UIViewController, Storyboardable {
         return cityCell
     })
     
-    // MARK: - Properties
     private var viewModel: SearchCityViewPresentable!
     var viewModelBuilder: SearchCityViewPresentable.ViewModelBuilder!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

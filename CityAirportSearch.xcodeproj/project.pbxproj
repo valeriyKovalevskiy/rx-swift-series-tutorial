@@ -212,8 +212,8 @@
 			children = (
 				3C71AB8B2617487100092CB3 /* CityCell.swift */,
 				3C71AB8C2617487100092CB3 /* CityCell.xib */,
-				3C13F0CE261B344000CC4B4E /* AirportCell.swift */,
 				3C13F0CF261B344000CC4B4E /* AirportCell.xib */,
+				3C13F0CE261B344000CC4B4E /* AirportCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
