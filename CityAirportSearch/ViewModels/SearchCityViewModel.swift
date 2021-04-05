@@ -12,39 +12,39 @@ import RxDataSources
 protocol SearchCityViewPresentable {
     
     typealias ViewModelBuilder = (SearchCityViewPresentable.Input) -> SearchCityViewPresentable
-    typealias Input = (
-        searchText: Driver<String>, ()
-    )
-    typealias Output = (
-        cities: Driver<[CityItemsSection]>, ()
-    )
+    typealias Input = ( searchText: Driver<String>, citySelected: Driver<CityViewModel>)
+    typealias Output = (cities: Driver<[CityItemsSection]>, ())
     
     var input: SearchCityViewPresentable.Input { get }
     var output: SearchCityViewPresentable.Output { get }
 }
 
-class SearchCityViewModel: SearchCityViewPresentable {
+final class SearchCityViewModel: SearchCityViewPresentable {
     
     typealias State = (airports: BehaviorRelay<Set<AirportModel>>, ())
+    typealias RoutingAction = (citySelectedRelay: PublishRelay<Set<AirportModel>>, ())
+    typealias Routing = (citySelected: Driver<Set<AirportModel>>, ())
     
-    
-    var input: SearchCityViewPresentable.Input
-    var output: SearchCityViewPresentable.Output
-    
+    // MARK: - Properties
     private let airportService: AirportApi
     private let disposeBag = DisposeBag()
     private let state: State = (airports: BehaviorRelay<Set<AirportModel>>(value: []), ())
+    private let routingAction: RoutingAction = (citySelectedRelay: PublishRelay(), ())
     
-    
+    var input: SearchCityViewPresentable.Input
+    var output: SearchCityViewPresentable.Output
+
+    lazy var router: Routing = (citySelected: routingAction.citySelectedRelay.asDriver(onErrorDriveWith: .empty()), ())
+
+    // MARK: - Init
     init(input: SearchCityViewPresentable.Input,
          airportService: AirportApi) {
         self.input = input
+        self.airportService = airportService
         self.output = SearchCityViewModel.output(input: self.input,
                                                  state: self.state)
-        self.airportService = airportService
         self.process()
     }
-    
 }
 
 private extension SearchCityViewModel {
@@ -92,9 +92,29 @@ private extension SearchCityViewModel {
         
         airportService
             .fetchAirports()
-            .map { Set($0) }
-            .map { [state] in state.airports.accept($0) }
+            .map { response -> Set<AirportModel> in
+                Set(response)
+            }
+            .map { [state] model in
+                state.airports.accept(model)
+            }
             .subscribe()
+            .disposed(by: disposeBag)
+        
+        input.citySelected
+            .map { viewModel -> String in
+                viewModel.city
+            }
+            .withLatestFrom(state.airports.asDriver()) { city, airports -> (city: String, airports: Set<AirportModel>) in
+                (city: city, airports: airports)
+            }
+            .map { (city, airports) -> Set<AirportModel> in
+                airports.filter { $0.city == city }
+            }
+            .map { [routingAction] airports in
+                routingAction.citySelectedRelay.accept(airports)
+            }
+            .drive()
             .disposed(by: disposeBag)
     }
 }

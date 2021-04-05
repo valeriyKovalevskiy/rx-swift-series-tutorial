@@ -31,6 +31,9 @@
 		3C71AB8826173FF000092CB3 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71AB8726173FF000092CB3 /* CityViewModel.swift */; };
 		3C71AB8D2617487100092CB3 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71AB8B2617487100092CB3 /* CityCell.swift */; };
 		3C71AB8E2617487100092CB3 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C71AB8C2617487100092CB3 /* CityCell.xib */; };
+		3CE6CE26261AF4A200067156 /* AirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6CE25261AF4A200067156 /* AirportsViewController.swift */; };
+		3CE6CE2A261B041300067156 /* AirportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6CE29261B041300067156 /* AirportsViewModel.swift */; };
+		3CE6CE2D261B0F3C00067156 /* AirportsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6CE2C261B0F3C00067156 /* AirportsCoordinator.swift */; };
 		989CCE408183998D427CF303 /* Pods_CityAirportSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFB430BBABD9C6C668F1F4C /* Pods_CityAirportSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		3C71AB8726173FF000092CB3 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		3C71AB8B2617487100092CB3 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		3C71AB8C2617487100092CB3 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		3CE6CE25261AF4A200067156 /* AirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AirportsViewController.swift; path = /Users/valeriy/Desktop/CityAirportSearch/CityAirportSearch/AirportsViewController.swift; sourceTree = "<absolute>"; };
+		3CE6CE29261B041300067156 /* AirportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewModel.swift; sourceTree = "<group>"; };
+		3CE6CE2C261B0F3C00067156 /* AirportsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsCoordinator.swift; sourceTree = "<group>"; };
 		5FFB430BBABD9C6C668F1F4C /* Pods_CityAirportSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityAirportSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB4CE9200103859E8CE8DEF /* Pods-CityAirportSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityAirportSearch.debug.xcconfig"; path = "Target Support Files/Pods-CityAirportSearch/Pods-CityAirportSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				3C71AB8A2617485400092CB3 /* Cells */,
+				3CE6CE25261AF4A200067156 /* AirportsViewController.swift */,
 				3C22C7DB2616DBBD00528C2F /* SearchCityViewController.swift */,
 				3C22C7DD2616DBBD00528C2F /* Main.storyboard */,
 				3C22C7E22616DBBE00528C2F /* LaunchScreen.storyboard */,
@@ -130,6 +137,7 @@
 			children = (
 				3C22C7F62616E2A600528C2F /* SearchCityViewModel.swift */,
 				3C71AB8726173FF000092CB3 /* CityViewModel.swift */,
+				3CE6CE29261B041300067156 /* AirportsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 				3C22C80B2616E80900528C2F /* BaseCoordinator.swift */,
 				3C22C8072616E6CA00528C2F /* Coordinator.swift */,
 				3C22C8032616E68F00528C2F /* SearchCityCoordinator.swift */,
+				3CE6CE2C261B0F3C00067156 /* AirportsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -342,9 +351,12 @@
 				3C71AB73261706FF00092CB3 /* AirportHttpService.swift in Sources */,
 				3C71AB762617075E00092CB3 /* AirportHttpRouter.swift in Sources */,
 				3C71AB7D26170B1D00092CB3 /* AirportApi.swift in Sources */,
+				3CE6CE26261AF4A200067156 /* AirportsViewController.swift in Sources */,
 				3C22C8042616E68F00528C2F /* SearchCityCoordinator.swift in Sources */,
 				3C71AB6D261705FD00092CB3 /* HttpRouter.swift in Sources */,
 				3C71AB70261706A600092CB3 /* HttpService.swift in Sources */,
+				3CE6CE2A261B041300067156 /* AirportsViewModel.swift in Sources */,
+				3CE6CE2D261B0F3C00067156 /* AirportsCoordinator.swift in Sources */,
 				3C22C8112616E8B100528C2F /* Storyboardable.swift in Sources */,
 				3C22C80C2616E80900528C2F /* BaseCoordinator.swift in Sources */,
 				3C22C8152616ED3E00528C2F /* AppCoordinator.swift in Sources */,

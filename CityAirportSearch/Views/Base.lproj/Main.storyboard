@@ -65,6 +65,36 @@
             </objects>
             <point key="canvasLocation" x="14" y="89"/>
         </scene>
+        <!--Airports View Controller-->
+        <scene sceneID="52M-yI-Fyx">
+            <objects>
+                <viewController storyboardIdentifier="AirportsViewController" id="MXf-FB-89L" customClass="AirportsViewController" customModule="CityAirportSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HXP-py-Aem">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yds-23-z2R">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7r-zE-vbQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yds-23-z2R" firstAttribute="top" secondItem="c7r-zE-vbQ" secondAttribute="top" id="6lP-3t-GkW"/>
+                            <constraint firstItem="c7r-zE-vbQ" firstAttribute="bottom" secondItem="Yds-23-z2R" secondAttribute="bottom" id="CDr-Y3-wvc"/>
+                            <constraint firstItem="Yds-23-z2R" firstAttribute="leading" secondItem="c7r-zE-vbQ" secondAttribute="leading" id="awE-Rp-uYa"/>
+                            <constraint firstItem="c7r-zE-vbQ" firstAttribute="trailing" secondItem="Yds-23-z2R" secondAttribute="trailing" id="gu5-hW-7Tw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Yds-23-z2R" id="W69-QB-Ogv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UI-cH-ek7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="88"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="customPink">

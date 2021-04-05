@@ -7,6 +7,7 @@
 
 import Foundation
 
+typealias AirportsResponse = [AirportModel]
 
 struct AirportModel: Codable {
     let code, lat, lon, name: String
@@ -36,5 +37,3 @@ extension AirportModel: Hashable {
         hasher.combine(code)
     }
 }
-
-typealias AirportsResponse = [AirportModel]

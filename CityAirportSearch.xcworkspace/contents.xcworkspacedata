@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/valeriy/Desktop/CityAirportSearch/CityAirportSearch/AirportsViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:CityAirportSearch.xcodeproj">
    </FileRef>
    <FileRef

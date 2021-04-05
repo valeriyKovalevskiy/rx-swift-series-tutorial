@@ -36,7 +36,8 @@ final class SearchCityViewController: UIViewController, Storyboardable {
         
         // View Model will created after we pass some input 
         viewModel = viewModelBuilder((
-            searchText: searchTextField.rx.text.orEmpty.asDriver(), ()
+            searchText: searchTextField.rx.text.orEmpty.asDriver(),
+            citySelected: tableView.rx.modelSelected(CityViewModel.self).asDriver()
         ))
         
         setupUI()
